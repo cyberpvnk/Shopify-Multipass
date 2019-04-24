@@ -1,33 +1,18 @@
-package com.acme.sso;
+package ullu.ka.patta;
 
-import org.json.JSONObject;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.ssl.OpenSSL;
-
-import java.nio.charset.StandardCharsets;
-import java.security.CryptoPrimitive;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-//import java.util.Date;
-import java.time.LocalDateTime;
-import java.net.URLEncoder;
-
-import java.security.MessageDigest;
-import java.security.SecureRandom;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
-import java.util.Arrays;
 
 import javax.crypto.Cipher;
 import javax.crypto.Mac;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 
 public class SsoExample3
 {
@@ -55,7 +40,7 @@ public class SsoExample3
             // Initialization vector
             SecureRandom random = new SecureRandom();
             byte[] iv = new byte[BLOCK_SIZE];
-            random.nextBytes(iv);                             // <-- UNCOMMENT this
+            random.nextBytes(iv);
             IvParameterSpec ivSpec = new IvParameterSpec(iv);
 
             // Javax Encryption
